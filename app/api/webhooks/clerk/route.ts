@@ -1,7 +1,7 @@
 import { Webhook } from "svix";
 import { headers } from "next/headers";
 import { type WebhookEvent } from "@clerk/nextjs/server";
-import { createUser } from "@/lib/actions/customer/user.actions";
+import { createUser } from "@/lib/actions/students/user.actions";
 
 export async function POST(request: Request) {
 	try {

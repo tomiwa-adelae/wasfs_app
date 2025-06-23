@@ -14,6 +14,7 @@ export interface IProgram extends Document {
 	estimatedDuration?: string;
 	createdAt?: Date;
 	updatedAt?: Date;
+	status?: string;
 }
 
 // Define Mongoose Schema with Type Safety
@@ -54,6 +55,10 @@ const ProgramSchema = new Schema<IProgram>(
 		certificateAvailable: {
 			type: Boolean,
 			default: true,
+		},
+		status: {
+			type: String,
+			default: "pending",
 		},
 		estimatedDuration: {
 			type: String, // e.g., "4 weeks", "6 hours"
