@@ -1,11 +1,11 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { VerifyForm } from "./_components/VerifyForm";
 
 const page = () => {
 	return (
-		<div>
+		<Suspense>
 			<VerifyForm />
-		</div>
+		</Suspense>
 	);
 };
 
