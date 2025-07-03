@@ -32,7 +32,7 @@ export async function markLessonComplete(
 		revalidatePath(`/dashboard/${slug}`);
 
 		return { status: "success", message: "Progress updated" };
-	} catch (error) {
+	} catch {
 		return {
 			status: "error",
 			message: "Failed to mark lesson as completed!",

@@ -2,7 +2,6 @@
 import {
 	InputOTP,
 	InputOTPGroup,
-	InputOTPSeparator,
 	InputOTPSlot,
 } from "@/components/ui/input-otp";
 import { Loader } from "@/components/sidebar/Loader";
@@ -14,18 +13,9 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { authClient } from "@/lib/auth-client";
-import {
-	IconBrandGoogle,
-	IconEye,
-	IconEyeClosed,
-	IconMail,
-} from "@tabler/icons-react";
+import { IconMail } from "@tabler/icons-react";
 import Link from "next/link";
-import { useState, useTransition } from "react";
-import { toast } from "sonner";
+import { useTransition } from "react";
 import { useSearchParams } from "next/navigation";
 
 export const VerifyForm = () => {

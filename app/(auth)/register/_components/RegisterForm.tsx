@@ -18,12 +18,10 @@ import {
 	IconMail,
 } from "@tabler/icons-react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
 import { toast } from "sonner";
 
 export const RegisterForm = () => {
-	const router = useRouter();
 	const [googlePending, startGoogleTransition] = useTransition();
 	const [emailPending, startEmailTransition] = useTransition();
 

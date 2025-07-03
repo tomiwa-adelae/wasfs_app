@@ -58,7 +58,7 @@ export const EnrollmentButton = ({
 			if (result.status === "success") {
 				toast.success(result.message);
 				initializePayment({
-					onSuccess: async (reference: any) => {
+					onSuccess: async () => {
 						const { data: paymentResult, error } = await tryCatch(
 							updateEnrolledCourse(courseId, "Active")
 						);

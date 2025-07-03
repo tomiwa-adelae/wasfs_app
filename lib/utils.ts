@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 export const formatMoneyInput = (inputValue: any) => {
 	if (inputValue == null || isNaN(Number(inputValue))) return "0";
 
-	let value = String(inputValue).replace(/[^0-9.]/g, "");
+	const value = String(inputValue).replace(/[^0-9.]/g, "");
 	let [whole, decimal] = value.split(".");
 	whole = whole.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 	return decimal !== undefined ? `${whole}.${decimal}` : whole;

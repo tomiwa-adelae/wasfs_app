@@ -1,11 +1,10 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { navItems } from "@/constants";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
 	Sheet,
 	SheetContent,
@@ -18,7 +17,6 @@ import { Logo } from "@/components/sidebar/Logo";
 export function MobileNavbar() {
 	const [openMobile, setOpenMobile] = useState(false); // <-- add state
 	const pathname = usePathname();
-	const router = useRouter();
 
 	const handleClick = () => {
 		if (setOpenMobile) {

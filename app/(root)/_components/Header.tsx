@@ -3,7 +3,6 @@ import { Logo } from "@/components/sidebar/Logo";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { DEFAULT_PROFILE_PICTURE, navItems } from "@/constants";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { MobileNavbar } from "./MobileNavbar";

@@ -1,7 +1,6 @@
 import { Logo } from "@/components/sidebar/Logo";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import React, { ReactNode } from "react";
 

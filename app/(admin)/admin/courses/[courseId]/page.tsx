@@ -1,6 +1,5 @@
-import { getIndividualCourse } from "@/app/data/course/get-course";
 import { Badge } from "@/components/ui/badge";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
 	Collapsible,
@@ -20,8 +19,6 @@ import {
 import { CheckIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import { checkIfCourseBought } from "@/app/data/user/user-is-enrolled";
-import Link from "next/link";
 import { RenderDescription } from "@/components/rich-text-editor/RenderDescription";
 import { adminGetCourse } from "@/app/data/admin/admin-get-course";
 
@@ -30,8 +27,6 @@ type Params = Promise<{ id: string }>;
 const page = async ({ params }: { params: Params }) => {
 	const { id } = await params;
 	const course = await adminGetCourse(id);
-
-	const isEnrolled = await checkIfCourseBought(course.id);
 
 	return (
 		<div className="grid grid-cols1 gap-8 lg:grid-cols-3 mt-5">

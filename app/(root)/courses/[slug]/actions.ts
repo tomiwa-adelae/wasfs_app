@@ -3,10 +3,8 @@
 import { requireUser } from "@/app/data/user/require-user";
 import arcjet, { fixedWindow } from "@/lib/arcjet";
 import { prisma } from "@/lib/db";
-import { env } from "@/lib/env";
 import { ApiResponse } from "@/lib/types";
 import { request } from "@arcjet/next";
-import { redirect } from "next/navigation";
 
 const aj = arcjet.withRule(
 	fixedWindow({
@@ -49,7 +47,7 @@ export const enrollInCourseAction = async (
 
 		if (!course) return { status: "error", message: " Course not found" };
 
-		const result = await prisma.$transaction(async (tx) => {
+		await prisma.$transaction(async (tx) => {
 			const existingEnrollment = await tx.enrollment.findUnique({
 				where: {
 					userId_courseId: {
@@ -97,7 +95,7 @@ export const enrollInCourseAction = async (
 			status: "success",
 			message: "You have successfully enrolled in the course",
 		};
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to enroll in course" };
 	}
 };
@@ -136,7 +134,7 @@ export const updateEnrolledCourse = async (
 
 		if (!course) return { status: "error", message: " Course not found" };
 
-		const result = await prisma.$transaction(async (tx) => {
+		await prisma.$transaction(async (tx) => {
 			const existingEnrollment = await tx.enrollment.findUnique({
 				where: {
 					userId_courseId: {
@@ -186,7 +184,7 @@ export const updateEnrolledCourse = async (
 					? `You have successfully enrolled in the course`
 					: "Your purchase was not successful",
 		};
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to enroll in course" };
 	}
 };

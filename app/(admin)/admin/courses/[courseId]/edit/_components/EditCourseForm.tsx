@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
-import { z } from "zod";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -29,7 +28,6 @@ import {
 	CourseSchemaType,
 	courseStatus,
 } from "@/lib/zodSchema";
-import { description } from "@/components/sidebar/chart-area-interactive";
 import { Textarea } from "@/components/ui/textarea";
 import { formatMoneyInput, handleKeyDown } from "@/lib/utils";
 import { useState, useTransition } from "react";
@@ -37,7 +35,6 @@ import { RichTextEditor } from "@/components/rich-text-editor/RichTextEditor";
 import { Uploader } from "@/components/file-uploader/Uploader";
 import { Loader } from "@/components/sidebar/Loader";
 import { tryCatch } from "@/hooks/tryCatch";
-import { useConfetti } from "@/hooks/useConfetti";
 import { useRouter } from "next/navigation";
 import { AdminCourseType } from "@/app/data/admin/admin-get-course";
 import slugify from "slugify";
@@ -55,8 +52,6 @@ export function EditCourseForm({ data }: Props) {
 	console.log(data);
 
 	const router = useRouter();
-
-	const { triggerConfetti } = useConfetti();
 
 	const form = useForm<CourseSchemaType>({
 		resolver: zodResolver(courseSchema),

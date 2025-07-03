@@ -165,7 +165,7 @@ export const LoginForm = () => {
 				</CardContent>
 			</Card>
 			<p className="text-sm text-muted-foreground text-center mt-5">
-				Don't have an account?{" "}
+				Don&apos;t have an account?{" "}
 				<Link
 					href="/register"
 					className="font-medium hover:text-primary"

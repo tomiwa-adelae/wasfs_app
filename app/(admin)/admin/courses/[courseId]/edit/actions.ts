@@ -60,7 +60,7 @@ export const editCourse = async (
 		});
 
 		return { status: "success", message: "Course updated successfully" };
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to update course" };
 	}
 };
@@ -96,7 +96,7 @@ export const reorderLessons = async (
 		revalidatePath(`/admin/courses/${courseId}/edit`);
 
 		return { status: "success", message: "Lesson reordered successfully" };
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to reorder lessons" };
 	}
 };
@@ -128,7 +128,7 @@ export const reorderChapter = async (
 		revalidatePath(`/admin/courses/${courseId}/edit`);
 
 		return { status: "success", message: "Chapter reordered successfully" };
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to reorder chapters" };
 	}
 };
@@ -169,7 +169,7 @@ export const createChapter = async (
 		revalidatePath(`/admin/courses/${result.data.courseId}/edit`);
 
 		return { status: "success", message: "Chapter successfully created" };
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to create chapter" };
 	}
 };
@@ -213,7 +213,7 @@ export const createLesson = async (
 		revalidatePath(`/admin/courses/${result.data.courseId}/edit`);
 
 		return { status: "success", message: "Lesson successfully created" };
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to create chapter" };
 	}
 };
@@ -288,7 +288,7 @@ export const deleteLesson = async ({
 			status: "success",
 			message: "Lesson deleted and positions reordered",
 		};
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to delete lesson" };
 	}
 };
@@ -362,7 +362,7 @@ export const deleteChapter = async ({
 			status: "success",
 			message: "Chapter deleted and positions reordered",
 		};
-	} catch (error) {
+	} catch {
 		return { status: "error", message: "Failed to delete chapter" };
 	}
 };

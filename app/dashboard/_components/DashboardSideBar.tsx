@@ -14,8 +14,6 @@ import {
 	SidebarMenuButton,
 	SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import Link from "next/link";
-import Image from "next/image";
 import { Logo } from "@/components/sidebar/Logo";
 
 const data = {

@@ -1,11 +1,8 @@
 "use client";
 
 import {
-	IconCreditCard,
 	IconDotsVertical,
 	IconLogout,
-	IconNotification,
-	IconUserCircle,
 	IconUsersGroup,
 } from "@tabler/icons-react";
 
@@ -36,7 +33,7 @@ export function NavUser() {
 
 	const handleSignout = useSignout();
 
-	const { data: session, isPending } = authClient.useSession();
+	const { data: session } = authClient.useSession();
 
 	return (
 		<SidebarMenu>
