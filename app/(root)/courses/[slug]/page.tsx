@@ -315,7 +315,7 @@ const page = async ({ params }: { params: Params }) => {
 									className={buttonVariants({
 										className: "w-full",
 									})}
-									href="/"
+									href={`/dashboard/${slug}`}
 								>
 									Watch now
 								</Link>

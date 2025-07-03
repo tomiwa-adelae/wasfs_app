@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { IconBook, IconDashboard } from "@tabler/icons-react";
 import { useSignout } from "@/hooks/use-signout";
+import Link from "next/link";
 
 interface Props {
 	name: string;
@@ -56,21 +57,25 @@ export function UserDropdown({ image, email, name }: Props) {
 				</DropdownMenuLabel>
 				<DropdownMenuSeparator />
 				<DropdownMenuGroup>
-					<DropdownMenuItem>
-						<IconDashboard
-							size={16}
-							className="opacity-60"
-							aria-hidden="true"
-						/>
-						<span>Dashboard</span>
+					<DropdownMenuItem asChild>
+						<Link href="/dashboard">
+							<IconDashboard
+								size={16}
+								className="opacity-60"
+								aria-hidden="true"
+							/>
+							<span>Dashboard</span>
+						</Link>
 					</DropdownMenuItem>
-					<DropdownMenuItem>
-						<IconBook
-							size={16}
-							className="opacity-60"
-							aria-hidden="true"
-						/>
-						<span>My courses</span>
+					<DropdownMenuItem asChild>
+						<Link href="/dashboard">
+							<IconBook
+								size={16}
+								className="opacity-60"
+								aria-hidden="true"
+							/>
+							<span>My courses</span>
+						</Link>
 					</DropdownMenuItem>
 				</DropdownMenuGroup>
 				<DropdownMenuSeparator />
