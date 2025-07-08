@@ -153,6 +153,7 @@ export function CreateCourseForm() {
 						)}
 					/>
 					<Button
+						size="md"
 						type="button"
 						className="w-fit"
 						onClick={() => {
@@ -340,7 +341,7 @@ export function CreateCourseForm() {
 						</FormItem>
 					)}
 				/>
-				<Button type="submit" disabled={pending}>
+				<Button size="md" type="submit" disabled={pending}>
 					{pending ? <Loader /> : <>Create course</>}
 				</Button>
 			</form>

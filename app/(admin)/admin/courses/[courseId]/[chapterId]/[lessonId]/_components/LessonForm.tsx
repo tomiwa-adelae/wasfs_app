@@ -151,7 +151,7 @@ export const LessonForm = ({ data, chapterId, courseId }: Props) => {
 									</FormItem>
 								)}
 							/>
-							<Button disabled={pending} type="submit">
+							<Button size="md" disabled={pending} type="submit">
 								{pending ? (
 									<>
 										<Loader2 className="size-4 animate-spin ml-1" />{" "}

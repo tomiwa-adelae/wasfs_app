@@ -8,6 +8,15 @@ import { CTA } from "../_components/CTA";
 import { Testimonials } from "../_components/Testimonials";
 import { FAQs } from "../_components/FAQs";
 import { WASFSMap } from "../_components/WASFSMap";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Contact WASFS | Get in Touch for Forensic Training & Support",
+	description:
+		"Need help? Contact the West African School of Forensic Studies (WASFS) for inquiries about programs, enrollment, and support. Reach us via email, phone, or chat.",
+	keywords:
+		"contact WASFS, forensic training support, forensic certification inquiries, forensic course assistance, WASFS admissions contact, wasfs, prof akinteye ademola, ademola, akinteye, simon akinteye, about",
+};
 
 const page = () => {
 	return (
@@ -16,7 +25,7 @@ const page = () => {
 				<h1 className="font-bold text-4xl md:text-5xl lg:text-6xl">
 					Get in touch
 				</h1>
-				<p className="text-muted-foreground text-base mt-2">
+				<p className="text-muted-foreground dark:text-accent-foreground/70 text-base mt-2">
 					Have a question or need assistance? Reach out to our
 					dedicated support team. We're here to help with any
 					inquiries you may have.

@@ -85,6 +85,7 @@ export const CourseContent = ({ data }: Props) => {
 			<div className="py-4 border-b">
 				{data.lessonProgress.length > 0 ? (
 					<Button
+						size="md"
 						variant={"outline"}
 						className="bg-green-500/10 hover:text-green-600 text-green-600"
 					>
@@ -92,7 +93,7 @@ export const CourseContent = ({ data }: Props) => {
 						Completed
 					</Button>
 				) : (
-					<Button onClick={onSubmit} variant="outline">
+					<Button size="md" onClick={onSubmit} variant="outline">
 						{pending ? (
 							<>
 								<Loader2 className="size-4 animate-spin ml-1" />{" "}

@@ -85,7 +85,7 @@ export const LoginForm = () => {
 						Welcome back to WASFS
 					</CardTitle>
 					<CardDescription className="text-muted-foreground text-sm">
-						Login with your email
+						Login with your google account
 					</CardDescription>
 				</CardHeader>
 				<CardContent className="space-y-4 w-full">
@@ -93,6 +93,7 @@ export const LoginForm = () => {
 						onClick={onSubmitGoogle}
 						className="w-full"
 						variant={"outline"}
+						size="md"
 					>
 						{googlePending ? (
 							<Loader />
@@ -153,6 +154,7 @@ export const LoginForm = () => {
 						onClick={onSubmitEmail}
 						className="w-full"
 						disabled={emailPending}
+						size="md"
 					>
 						{emailPending ? (
 							<Loader />

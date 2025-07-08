@@ -1,3 +1,4 @@
+import Head from "next/head";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -20,6 +21,10 @@ export const metadata: Metadata = {
 		"Join the West African School of Forensic Studies (WASFS) for accredited forensic auditing, criminal investigations, and digital forensics training... 100% online, globally recognized certifications",
 	keywords:
 		"forensic studies, forensic training, digital forensics certification, fraud auditing courses, forensic science school, criminal investigations training, IICFIP certification, cybercrime investigation, forensic accounting diploma, wasfs, prof akinteye ademola, ademola, akinteye, simon akinteye",
+	openGraph: {
+		images: "/assets/images/opengraph.png",
+	},
+	metadataBase: new URL("https://wasfsapp.vercel.app"),
 };
 
 export default function RootLayout({
@@ -29,6 +34,23 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<Head>
+				<meta property="og:image" content="/opengraph.png" />
+				<meta
+					property="og:image"
+					content="/assets/images/opengraph.png"
+				/>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0, user-scalable=no"
+				/>
+				<meta
+					data-n-head="ssr"
+					data-hid="viewport"
+					name="viewport"
+					content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1"
+				/>
+			</Head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>

@@ -111,7 +111,11 @@ export const NewLessonModal = ({
 							)}
 						/>
 						<DialogFooter>
-							<Button disabled={pending} className="submit">
+							<Button
+								size="md"
+								disabled={pending}
+								className="submit"
+							>
 								{pending ? (
 									<>
 										<Loader2 className="size-4 animate-spin" />{" "}

@@ -1,8 +1,16 @@
 import { getAllCourses } from "@/app/data/course/get-all-courses";
 import React, { Suspense } from "react";
 import { CourseCard, CourseCardSkeleton } from "../_components/CourseCard";
-
 export const dynamic = "force-dynamic";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Courses | WASFS Courses",
+	description:
+		"Explore WASFS forensic training programs, including forensic accounting, criminal investigations, digital forensics, and fraud auditing. Enroll today in accredited forensic courses.",
+	keywords:
+		"forensic programs, forensic certifications, forensic courses online, digital forensics training, fraud auditing certification, cybercrime investigation courses, forensic science education, forensic diploma, IICFIP accredited training, wasfs, prof akinteye ademola, ademola, akinteye, simon akinteye, about",
+};
 
 const page = () => {
 	return (

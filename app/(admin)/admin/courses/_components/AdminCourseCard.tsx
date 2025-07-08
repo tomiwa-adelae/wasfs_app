@@ -93,7 +93,10 @@ export const AdminCourseCard = ({ data }: iAppProps) => {
 					</div>
 				</div>
 				<Link
-					className={buttonVariants({ className: "w-full mt-4" })}
+					className={buttonVariants({
+						className: "w-full mt-4",
+						size: "md",
+					})}
 					href={`/admin/courses/${data.id}/edit`}
 				>
 					Edit Course <ArrowRight className="size-4" />

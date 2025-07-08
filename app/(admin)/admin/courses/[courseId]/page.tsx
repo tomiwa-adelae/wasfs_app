@@ -22,11 +22,11 @@ import React from "react";
 import { RenderDescription } from "@/components/rich-text-editor/RenderDescription";
 import { adminGetCourse } from "@/app/data/admin/admin-get-course";
 
-type Params = Promise<{ id: string }>;
+type Params = Promise<{ courseId: string }>;
 
 const page = async ({ params }: { params: Params }) => {
-	const { id } = await params;
-	const course = await adminGetCourse(id);
+	const { courseId } = await params;
+	const course = await adminGetCourse(courseId);
 
 	return (
 		<div className="grid grid-cols1 gap-8 lg:grid-cols-3 mt-5">

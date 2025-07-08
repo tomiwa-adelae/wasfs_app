@@ -108,6 +108,7 @@ export const RegisterForm = () => {
 					<Button
 						onClick={onSubmitGoogle}
 						className="w-full"
+						size="md"
 						variant={"outline"}
 					>
 						{googlePending ? (
@@ -172,6 +173,7 @@ export const RegisterForm = () => {
 						onClick={onSubmitEmail}
 						className="w-full"
 						disabled={emailPending}
+						size="md"
 					>
 						{emailPending ? (
 							<Loader />

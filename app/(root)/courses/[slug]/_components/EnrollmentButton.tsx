@@ -93,7 +93,12 @@ export const EnrollmentButton = ({
 	}
 
 	return (
-		<Button className="w-full" onClick={onSubmit} disabled={pending}>
+		<Button
+			size="md"
+			className="w-full"
+			onClick={onSubmit}
+			disabled={pending}
+		>
 			{pending ? (
 				<>
 					<Loader2 className="size-4 animate-spin ml-1" /> Loading...

@@ -103,7 +103,11 @@ export const NewChapterModal = ({ courseId }: { courseId: string }) => {
 							)}
 						/>
 						<DialogFooter>
-							<Button disabled={pending} className="submit">
+							<Button
+								size="md"
+								disabled={pending}
+								className="submit"
+							>
 								{pending ? (
 									<>
 										<Loader2 className="size-4 animate-spin" />{" "}

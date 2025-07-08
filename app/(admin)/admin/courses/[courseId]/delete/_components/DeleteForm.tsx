@@ -51,7 +51,10 @@ export const DeleteForm = ({ courseId }: { courseId: string }) => {
 				</CardHeader>
 				<CardContent className="flex items-center  justify-between">
 					<Link
-						className={buttonVariants({ variant: "outline" })}
+						className={buttonVariants({
+							variant: "outline",
+							size: "md",
+						})}
 						href={`/admin/courses`}
 					>
 						Cancel
@@ -60,6 +63,7 @@ export const DeleteForm = ({ courseId }: { courseId: string }) => {
 						variant={"destructive"}
 						onClick={onSubmit}
 						disabled={pending}
+						size="md"
 					>
 						{pending ? (
 							<>
