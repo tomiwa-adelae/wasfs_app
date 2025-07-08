@@ -3,8 +3,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import React, { ReactNode } from "react";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
-const layout = ({ children }: { children: ReactNode }) => {
+const layout = async ({ children }: { children: ReactNode }) => {
+	const session = await auth.api.getSession({
+		headers: await headers(),
+	});
+
+	if (session) return redirect("/");
 	return (
 		<div className="flex py-32 items-center justify-center min-h-screen">
 			<Button

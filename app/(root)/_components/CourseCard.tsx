@@ -51,7 +51,10 @@ export const CourseCard = ({ data }: Props) => {
 				</div>
 				<Link
 					href={`/courses/${data.slug}`}
-					className={buttonVariants({ className: "w-full mt-4" })}
+					className={buttonVariants({
+						className: "w-full mt-4",
+						size: "md",
+					})}
 				>
 					Learn more
 				</Link>

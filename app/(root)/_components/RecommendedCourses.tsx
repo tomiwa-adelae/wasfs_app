@@ -5,7 +5,7 @@ import { getAllCourses } from "@/app/data/course/get-all-courses";
 export const RecommendedCourses = async () => {
 	return (
 		<div className="container py-12">
-			<h2 className="text-3xl font-semibold text-center text-primary">
+			<h2 className="text-xl md:text-3xl lg:text-4xl font-semibold text-center text-primary">
 				Choose From Our World-Class Forensic Programs
 			</h2>
 

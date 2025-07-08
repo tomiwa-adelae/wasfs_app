@@ -27,13 +27,13 @@ export const Showcase = ({
 			<div className="grid z-10">
 				<div className={`container z-20`}>
 					<div className="pt-40 pb-10 z-10">
-						<h1 className="uppercase text-white text-4xl md:text-5xl lg:text-6xl font-bold lg:w-5/6">
+						<h1 className="text-white text-4xl md:text-5xl lg:text-7xl font-bold lg:w-5/6">
 							{title}
 						</h1>
 						<div className="text-gray-200 text-sm md:text-base lg:w-5/6 mt-4">
 							{description}
 						</div>
-						<div className="flex items-center justify-start gap-4 md:gap-8 mt-8">
+						<div className="flex flex-col md:flex-row items-center justify-start gap-4 md:gap-8 mt-8">
 							{buttons}
 						</div>
 						{extras}
