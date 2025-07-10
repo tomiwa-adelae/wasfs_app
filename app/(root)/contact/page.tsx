@@ -10,7 +10,7 @@ import { FAQs } from "../_components/FAQs";
 
 import dynamic from "next/dynamic";
 
-const {WASFSMap} = dynamic(() => import(""../_components/WASFSMap"), {
+const { WASFSMap } = dynamic(() => import("../_components/WASFSMap"), {
 	ssr: false,
 });
 
