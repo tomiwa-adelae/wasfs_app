@@ -6,6 +6,7 @@ export const Showcase = ({
 	description,
 	buttons,
 	extras,
+	image = "/assets/images/ppa-img.jpg",
 }: {
 	title: ReactNode;
 	description: ReactNode;
