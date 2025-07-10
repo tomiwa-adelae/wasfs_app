@@ -10,7 +10,7 @@ export const Logo = () => {
 				alt={"WASFS logo"}
 				width={1000}
 				height={1000}
-				className="w-[250px] md:w-[280px] lg:w-[350px] object-cover h-full"
+				className="w-[200px] md:w-[240px] lg:w-[300px] object-cover h-full"
 			/>
 		</Link>
 	);

@@ -14,8 +14,11 @@ export const Showcase = ({
 	image: string;
 }) => {
 	return (
-		<div className="relative">
-			<video
+		<div
+			style={{ backgroundImage: `url(${image})` }}
+			className="relative bg-scroll bg-no-repeat bg-cover bg-center min-h-[50vh] lg:min-h-[70vh] py-24 flex items-center justify-center"
+		>
+			{/* <video
 				autoPlay
 				loop
 				muted
@@ -23,7 +26,7 @@ export const Showcase = ({
 				className="absolute top-0 left-0 w-full h-full object-cover z-[-1]"
 			>
 				<source src={SHOWCASE_VIDEO} type="video/mp4" />
-			</video>
+			</video> */}
 			<div className="grid z-10">
 				<div className={`container z-20`}>
 					<div className="pt-40 pb-10 z-10">
