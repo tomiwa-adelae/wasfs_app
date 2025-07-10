@@ -8,12 +8,6 @@ import { CTA } from "../_components/CTA";
 import { Testimonials } from "../_components/Testimonials";
 import { FAQs } from "../_components/FAQs";
 
-import dynamic from "next/dynamic";
-
-const { WASFSMap } = dynamic(() => import("../_components/WASFSMap"), {
-	ssr: false,
-});
-
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -131,9 +125,9 @@ const page = () => {
 						);
 					})}
 				</div>
-				<div className="pt-10">
+				{/* <div className="pt-10">
 					<WASFSMap />
-				</div>
+				</div> */}
 			</div>
 			<CTA />
 			<Testimonials />
